@@ -1,0 +1,158 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./background-image.jpg');
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial;
+}
+
+.rotate-box {
+  width: 23%;
+  height: 30%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+  border-radius: 1rem; 
+  box-shadow: 3px 3px 10px 7px rgba(0, 0, 0, 0.3);
+  backface-visibility: hidden;
+  perspective: 2000px;
+}
+
+.rotate-box:hover {
+  transform: rotateY(180deg);
+  
+}
+
+.card-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  padding: 1rem 1.2rem;
+  border-radius: 1rem; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  backface-visibility: hidden;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-heading {
+  display: flex;
+  align-items: center;
+}
+
+.master-card-logo {
+  width: 40px;  
+}
+
+.master-card-heading {
+  font-size: 1rem;
+  color: white;
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+.master-card-chip {
+  width: 50px;
+  background: transparent;
+  border-radius: 6px;
+}
+
+.middle {
+  color: white;
+}
+
+.card-number-text {
+  font-size: 0.8rem;
+}
+
+.card-number {
+  font-size: 1.3rem;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: white;
+}
+
+.expire-validity {
+  font-size: 0.8rem;
+}
+
+.expire-date {
+  font-size: larger;
+}
+
+.back-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  transform: rotateY(180deg);
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+}
+
+.black-strip {
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  background-color: black;
+}
+
+.signature {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  height: 35px;
+  width: 80%;
+  background-color: #ffffff;
+  border-radius: 3px;
+  top: 90px;
+}
+
+.CVV-number {
+  top: 10px;
+  width: 30px;
+  height: 16px;
+  background-color: white;
+  position: absolute;
+  right: -30px;
+  border-radius: 3px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.details {
+  position: absolute;
+  top: 142px;
+  color: white;
+  font-size: 0.9rem;
+}
